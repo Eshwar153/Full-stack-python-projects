@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dynasty Dining - Restaurant Website </title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="static/img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="static/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+        <link rel="icon" href="/static/img/DALL·E 2025-02-12 19.47.50 - A sleek and elegant logo design for 'Dynasty Dining', featuring a stylized golden crown above a dining plate with chopsticks and a fork crossing under.webp">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <style>
+            /*Archive css*/
+            body {
+                background-color: #f4f4f4;
+                font-family: Arial, sans-serif;
+            }
+            .container {
+                margin-top: 50px;
+            }
+            .archive-section {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                margin-bottom: 30px;
+            }
+            .archive-image {
+                width: 100%;
+                height: 1000px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            footer {
+                margin-top: 30px;
+            }
+
+            .btn-primary{
+                    margin-left: 20px;
+                }
+        </style>
+        <!--Archive end-->
+    </head>
+
+    <body>
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="{%url 'index'%}" class="navbar-brand">Dynasty <span>Dining</span></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="{%url 'index'%}" class="nav-item nav-link">Home</a>
+                        <a href="{%url 'about'%}" class="nav-item nav-link">About</a>
+                        <a href="{%url 'feature'%}" class="nav-item nav-link">Feature</a>
+                        <a href="{%url 'team'%}" class="nav-item nav-link">Chef</a>
+                        <a href="{%url 'food_order'%}" class="nav-item nav-link">Menu</a>
+                        <a href="{%url 'booking'%}" class="nav-item nav-link">Booking</a>
+                        <!-- <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu">
+                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                            </div> -->
+                        <a href="{%url 'archive'%}" class="nav-item nav-link">Archive</a>
+                        <a href="{%url 'contact'%}" class="nav-item nav-link active">Contact</a>
+                        <a href="{%url 'offers'%}" class="btn btn-primary" tabindex="2" role="button">Offers</a>
+                        <div class="btn-group">
+                           <button type="button" class="btn btn-primary">Language</button>
+                           <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                             <span class="visually-hidden">Toggle Dropdown</span>
+                           </button>
+                           <ul class="dropdown-menu">
+                             <li><a class="dropdown-item" href="#">Action</a></li>
+                             <li><a class="dropdown-item" href="#">Another action</a></li>
+                             <li><a class="dropdown-item" href="#">Something else here</a></li>
+                             <li><hr class="dropdown-divider"></li>
+                             <li><a class="dropdown-item" href="#">Separated link</a></li>
+                           </ul>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Archive</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Archive</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+        
+        <!-- Archive Start -->
+        
+    <div class="container">
+        <div class="archive-section">
+            <img src="/static/img/New year gala.jpg" alt="New Year’s Gala" class="archive-image">
+            <h2>New Year’s Gala 2025</h2>
+            <p>A grand celebration with live music and a 5-course meal.</p>
+        </div>
+        
+        <div class="archive-section">
+            <img src="/static/img/Autumn tastimg.webp" alt="Autumn Tasting" class="archive-image">
+            <h2>Autumn Tasting 2025</h2>
+            <p>A special menu featuring seasonal delights.</p>
+        </div>
+        
+        <div class="archive-section">
+            <img src="/static/img/DALL·E 2025-02-23 19.06.35 - A luxurious 10th anniversary celebration for a restaurant named 'Dynasty Dining'. The setting features an elegant dining hall with golden and red deco.webp" alt="10th Anniversary" class="archive-image">
+            <h2>10th Anniversary Celebration</h2>
+            <p>Honoring a decade of fine dining.</p>
+        </div>
+        
+        <div class="archive-section">
+            <img src="/static/img/DALL·E 2025-02-23 19.10.07 - A cozy and elegant winter 2025 scene for a restaurant named 'Dynasty Dining'. The exterior is adorned with warm lights, snow-covered decorations, and .webp" alt="Winter Menu" class="archive-image">
+            <h2>Winter 2025 Menu</h2>
+            <p>A cozy selection of hearty soups and roasted delights.</p>
+        </div>
+        
+        <div class="archive-section">
+            <img src="/static/img/DALL·E 2025-02-23 19.12.55 - A grand celebration of a historical milestone for a restaurant named 'Dynasty Dining'. The scene showcases an opulent banquet hall with luxurious red .webp" alt="Historical Milestone" class="archive-image">
+            <h2>Historical Milestone</h2>
+            <p>2013 - Dynasty Dining opens its doors for the first time.</p>
+        </div>
+    </div>
+    
+        <!-- Archive End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="footer-contact">
+                                    <h2>Our Address</h2>
+                                    <p><i class="fa fa-map-marker-alt"></i>3, E-Block, 3rd Avenue,
+                                        Annanagar East,
+                                        Chennai - 600 102</p>
+                                    <p><i class="fa fa-phone-alt"></i>+044 2626 3355</p>
+                                    <p><i class="fa fa-envelope"></i>DynastyDining@Yahoo.com</p>
+                                    <div class="footer-social">
+                                        <a href=""><i class="fab fa-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href=""><i class="fab fa-youtube"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="footer-link">
+                                    <h2>Quick Links</h2>
+                                    <a href="">Terms of use</a>
+                                    <a href="">Privacy policy</a>
+                                    <a href="">Cookies</a>
+                                    <a href="">Help</a>
+                                    <a href="">FQAs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="footer-newsletter">
+                            <h2>Newsletter</h2>
+                            <p>
+                                Savor the Legacy" – Join our newsletter for delicious updates, limited-time offers, and a taste of luxury delivered straight to your inbox..
+                            </p>
+                            <div class="form">
+                                <input class="form-control" placeholder="Email goes here">
+                                <button class="btn custom-btn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>Copyright &copy; <a href="#">Dynasty Dining</a>, All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="static/lib/easing/easing.min.js"></script>
+        <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="static/lib/tempusdominus/js/moment.min.js"></script>
+        <script src="static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="static/mail/jqBootstrapValidation.min.js"></script>
+        <script src="static/mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="static/js/main.js"></script>
+    </body>
+</html>

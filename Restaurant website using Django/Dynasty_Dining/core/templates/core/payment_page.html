@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body class="container mt-5">
+    <h2 class="mb-4">Make Payment</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Card Holder Name</label>
+            <input type="text" name="card_holder" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label>Card Number</label>
+            <input type="text" name="card_number" class="form-control" maxlength="16" required>
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Pay Now</button>
+    </form>
+</body>
+</html>

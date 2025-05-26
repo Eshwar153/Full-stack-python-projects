@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dynasty Dining- Restaurant Website</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="/static/img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+        <link rel="icon" href="static/img/DALL·E 2025-02-12 19.47.50 - A sleek and elegant logo design for 'Dynasty Dining', featuring a stylized golden crown above a dining plate with chopsticks and a fork crossing under.webp">
+
+        <!-- Template Stylesheet -->
+        <link href="/static/css/style.css" rel="stylesheet">
+
+        <style>
+                .btn-primary{
+                    margin-left: 20px;
+                }
+        </style>
+    </head>
+
+    <body>
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="{%url 'index'%}" class="navbar-brand">Dynasty <span>Dining</span></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="{%url 'index'%}" class="nav-item nav-link">Home</a>
+                        <a href="{%url 'about'%}" class="nav-item nav-link">About</a>
+                        <a href="{%url 'feature'%}" class="nav-item nav-link active">Feature</a>
+                        <a href="{%url 'team'%}" class="nav-item nav-link">Chef</a>
+                        <a href="{%url 'menu'%}" class="nav-item nav-link">Menu</a>
+                        <a href="{%url 'food_order'%}" class="nav-item nav-link">Food Order</a>
+                        <a href="{%url 'booking'%}" class="nav-item nav-link">Booking</a>
+                        <!-- <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu">
+                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                            </div>
+                        </div> -->
+                        <a href="{%url 'archive'%}" class="nav-item nav-link">Archive</a>
+                        <a href="{%url 'contact'%}" class="nav-item nav-link">Contact</a>
+                        <a href="{%url 'offers'%}" class="btn btn-primary" tabindex="2" role="button">Offers</a>
+                        <div class="btn-group">
+                           <button type="button" class="btn btn-primary">Language</button>
+                           <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                             <span class="visually-hidden">Toggle Dropdown</span>
+                           </button>
+                           <ul class="dropdown-menu">
+                             <li><a class="dropdown-item" href="#">Action</a></li>
+                             <li><a class="dropdown-item" href="#">Another action</a></li>
+                             <li><a class="dropdown-item" href="#">Something else here</a></li>
+                             <li><hr class="dropdown-divider"></li>
+                             <li><a class="dropdown-item" href="#">Separated link</a></li>
+                           </ul>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Why Choose Us</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Features</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+
+        <!-- Feature Start -->
+        <div class="feature">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="section-header">
+                            <p>Why Choose Us</p>
+                            <h2>Our Key Features</h2>
+                        </div>
+                        <div class="feature-text">
+                            <div class="feature-img">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="/static/img/Image-1.jpg" alt="Image" height="158px">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="/static/img/Image-2.jpg" alt="Image">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="/static/img/Image-3.jpg" alt="Image">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="/static/img/Image-4.webp" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                Step into a world of sophistication and comfort. Dynasty Dining offers an inviting and stylish setting, perfect for family gatherings, romantic dinners, and special celebrations. Our carefully designed interiors create an atmosphere of warmth and elegance, making every meal a delightful experience.
+                            </p>
+                            <a class="btn custom-btn" href="{%url 'booking'%}">Book A Table</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-cooking"></i>
+                                    <h3>World’s best Chef</h3>
+                                    <p>
+                                        <h1 style="font-size: 20px;">"Crafted by a Culinary Legend"–</h1>Led by a globally acclaimed chef, Dynasty Dining delivers a royal feast of flavors, elegance, and perfection.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-vegetable"></i>
+                                    <h3>Natural ingredients</h3>
+                                    <p>
+                                         <h1 style="font-size: 20px;">"Fresh, Pure, and Delicious"-</h1>We believe in the power of nature. Our ingredients are carefully selected for their freshness, purity, and superior taste.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-medal"></i>
+                                    <h3>Best quality products</h3>
+                                    <p>
+                                        <h1 style="font-size: 20px;">"Uncompromising Quality, Unforgettable Flavor"–</h1>Every dish is crafted with hand-selected, top-tier ingredients to bring you a truly luxurious dining experience.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-meat"></i>
+                                    <h3>Fresh vegetables & Meat</h3>
+                                    <p>
+                                        <h1 style="font-size: 20px;">"Nature’s Finest, Served Daily"–</h1>We source crisp, fresh vegetables and top-tier meats to ensure every bite bursts with natural flavor and quality.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-courier"></i>
+                                    <h3>Fastest door delivery</h3>
+                                    <p>
+                                       <h1 style="font-size: 20px;">"Royal Feasts, Delivered Fast" –</h1> Enjoy the exquisite flavors of Dynasty Dining from the comfort of your home with our quick and reliable delivery service.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-fruits-and-vegetables"></i>
+                                    <h3>Storage & Quality Preservation</h3>
+                                    <p>
+                                        <h1 style="font-size: 20px;">"Excellence Starts with Proper Care" – </h1>At Dynasty Dining, our strict storage protocols guarantee that our meats, vegetables, and spices retain their superior quality.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="footer-contact">
+                                    <h2>Our Address</h2>
+                                    <p><i class="fa fa-map-marker-alt"></i>NO. 3, E-Block, 3rd Avenue,
+                                        Annanagar East,
+                                        Chennai - 600 102</p>
+                                    <p><i class="fa fa-phone-alt"></i>+044 2626 3355</p>
+                                    <p><i class="fa fa-envelope"></i>DynastyDining@Yahoo.com</p>
+                                    <div class="footer-social">
+                                        <a href=""><i class="fab fa-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href=""><i class="fab fa-youtube"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="footer-link">
+                                    <h2>Quick Links</h2>
+                                    <a href="">Terms of use</a>
+                                    <a href="">Privacy policy</a>
+                                    <a href="">Cookies</a>
+                                    <a href="">Help</a>
+                                    <a href="">FQAs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="footer-newsletter">
+                            <h2>Newsletter</h2>
+                            <p>
+                                Savor the Legacy" – Join our newsletter for delicious updates, limited-time offers, and a taste of luxury delivered straight to your inbox.
+                            </p>
+                            <div class="form">
+                                <input class="form-control" placeholder="Email goes here">
+                                <button class="btn custom-btn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>Copyright &copy; <a href="#">Dynasty Dining</a>, All Right Reserved.</p>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="/static/lib/easing/easing.min.js"></script>
+        <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/static/lib/tempusdominus/js/moment.min.js"></script>
+        <script src="/static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="/static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="/static/mail/jqBootstrapValidation.min.js"></script>
+        <script src="/static/mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="/static/js/main.js"></script>
+    </body>
+</html>

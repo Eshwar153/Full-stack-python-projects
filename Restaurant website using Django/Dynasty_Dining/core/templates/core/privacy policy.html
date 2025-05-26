@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Burger King - Food Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="static/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+        <link rel="icon" href="/static/img/DALL·E 2025-02-12 19.47.50 - A sleek and elegant logo design for 'Dynasty Dining', featuring a stylized golden crown above a dining plate with chopsticks and a fork crossing under.webp">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <style>
+             body {
+      font-family: Arial, sans-serif;
+      /* padding: 2rem; */
+      max-width: 100%;
+      margin: auto;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1, h2 {
+      color: #8b0000;
+    }
+
+
+    .btn-primary{
+    margin-left: 20px;
+  }
+        </style>
+    </head>
+
+    <body>
+         <!-- Nav Bar Start -->
+         <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="{%url 'index'%}" class="navbar-brand">Dynasty <span>Dining</span></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="{%url 'index'%}" class="nav-item nav-link">Home</a>
+                        <a href="{%url 'about'%}" class="nav-item nav-link active">About</a>
+                        <a href="{%url 'feature'%}" class="nav-item nav-link">Feature</a>
+                        <a href="{%url 'team'%}" class="nav-item nav-link">Chef</a>
+                        <a href="{%url 'menu'%}" class="nav-item nav-link">Menu</a>
+                        <a href="{%url 'booking'%}" class="nav-item nav-link">Booking</a>
+                        <!-- <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu">
+                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                            </div>
+                        </div> -->
+                        <a href="{%url 'archive'%}" class="nav-item nav-link">Archive</a>
+                        <a href="{%url 'contact'%}" class="nav-item nav-link">Contact</a>
+                        <a href="{%url 'offers'%}" class="btn btn-primary" tabindex="2" role="button">Offers</a>
+                        <div class="btn-group">
+                           <button type="button" class="btn btn-primary">Language</button>
+                           <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                             <span class="visually-hidden">Toggle Dropdown</span>
+                           </button>
+                           <ul class="dropdown-menu">
+                             <li><a class="dropdown-item" href="#">Action</a></li>
+                             <li><a class="dropdown-item" href="#">Another action</a></li>
+                             <li><a class="dropdown-item" href="#">Something else here</a></li>
+                             <li><hr class="dropdown-divider"></li>
+                             <li><a class="dropdown-item" href="#">Separated link</a></li>
+                           </ul>
+                         </div>
+                    </div>
+                    <!-- <a href="Order now.html" class="btn btn-outline-success btn-lg"  role="button" >Order Now</a> -->
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+
+         <!-- Page Header Start -->
+         <div class="page-header mb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Privacy Policy</h2>
+                    </div>
+                    <div class="col-12">
+                        <!-- <a href="">Home</a>
+                        <a href="">About Us</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+        <h1 style="text-align: center;">Privacy Policy for Dynasty Dining</h1>
+  <p style="text-align: center;"><strong>Effective Date:</strong> [Insert Date]</p>
+
+  <p style="text-align: center;">At <strong>Dynasty Dining</strong>, your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <a href="https://www.dynastydining.com">www.dynastydining.com</a>.</p>
+    
+  <center>
+    <h2>1. Information We Collect</h2>
+    <p><strong>a. Personal Information</strong></p>
+    <ul>
+      <li>Name</li>
+      <li>Email address</li>
+      <li>Phone number</li>
+      <li>Reservation details (date, time, number of guests)</li>
+      <li>Any information you provide through contact forms or booking systems</li>
+    </ul>
+  
+    <p><strong>b. Non-Personal Information</strong></p>
+    <ul>
+      <li>IP address</li>
+      <li>Browser type and version</li>
+      <li>Pages visited and time spent on the site</li>
+      <li>Cookies and usage data</li>
+    </ul>
+  
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+      <li>Process reservations and orders</li>
+      <li>Respond to inquiries or customer service requests</li>
+      <li>Send confirmation emails and updates</li>
+      <li>Improve website performance and user experience</li>
+      <li>Comply with legal obligations</li>
+    </ul>
+  
+    <h2>3. Sharing Your Information</h2>
+    <p>We do <strong>not</strong> sell, rent, or trade your personal information. We may share your data with:</p>
+    <ul>
+      <li>Service providers (e.g., reservation or hosting platforms) under strict confidentiality agreements</li>
+      <li>Legal authorities, if required by law</li>
+    </ul>
+  
+    <h2>4. Cookies and Tracking Technologies</h2>
+    <p>Our website uses cookies to enhance your browsing experience. You can control or disable cookies through your browser settings, but some features of the site may not work properly without them.</p>
+  
+    <h2>5. Data Security</h2>
+    <p>We implement reasonable security measures to protect your personal information. However, no method of transmission over the internet is 100% secure.</p>
+  
+    <h2>6. Your Rights</h2>
+    <p>Depending on your jurisdiction, you may have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Request corrections or deletions</li>
+      <li>Withdraw consent to data processing</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <strong>[your email address]</strong>.</p>
+  
+    <h2>7. Third-Party Links</h2>
+    <p>Our website may contain links to external websites. We are not responsible for the privacy practices or content of those third parties.</p>
+  
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy occasionally. Any changes will be posted on this page with an updated “Effective Date.”</p>
+  
+    <h2>9. Contact Us</h2>
+    <p>If you have questions about this Privacy Policy, please contact us at:</p>
+    <p>
+      <strong>Dynasty Dining</strong><br />
+      Email: [your email address]<br />
+      Phone: [your phone number]<br />
+      Website: <a href="https://www.dynastydining.com">www.dynastydining.com</a>
+    </p>
+  </center>
+ 
+
+   <!-- Footer Start -->
+   <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Address</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>3, E-Block, 3rd Avenue,
+                                Annanagar East,
+                                Chennai - 600 102</p>
+                            <p><i class="fa fa-phone-alt"></i>+044 2626 3355</p>
+                            <p><i class="fa fa-envelope"></i>DynastyDining@Yahoo.com</p>
+                            <div class="footer-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-youtube"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-link">
+                            <h2>Quick Links</h2>
+                            <a href="">Terms of use</a>
+                            <a href="">Privacy policy</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="footer-newsletter">
+                    <h2>Newsletter</h2>
+                    <p>
+             Savor the Legacy" – Join our newsletter for delicious updates, limited-time offers, and a taste of luxury delivered straight to your inbox.
+                    </p>
+                    <div class="form">
+                        <input class="form-control" placeholder="Email goes here">
+                        <button class="btn custom-btn">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <p>Copyright &copy; <a href="#">Dynasty Dining</a>, All Right Reserved.</p>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="static/lib/easing/easing.min.js"></script>
+<script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="static/lib/tempusdominus/js/moment.min.js"></script>
+<script src="static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="static/mail/jqBootstrapValidation.min.js"></script>
+<script src="static/mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="static/js/main.js"></script>
+
+    </body>
+    </html>

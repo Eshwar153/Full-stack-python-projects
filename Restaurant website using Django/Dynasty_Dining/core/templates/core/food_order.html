@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dynasty Dining - Restaurant Website </title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="static/img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="staticlib/animate/animate.min.css" rel="stylesheet">
+        <link href="staticlib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="staticlib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="staticlib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+        <link rel="icon" href="/static/img/DALL·E 2025-02-12 19.47.50 - A sleek and elegant logo design for 'Dynasty Dining', featuring a stylized golden crown above a dining plate with chopsticks and a fork crossing under.webp">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        
+        <style>
+    .modal-dialog{
+        color:black;
+    }
+        </style>
+    </head>
+
+        <body>
+             <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="{%url 'index'%}" class="navbar-brand">Dynasty <span>Dining</span></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="{%url 'index'%}" class="nav-item nav-link">Home</a>
+                        <a href="{%url 'about'%}" class="nav-item nav-link">About</a>
+                        <a href="{%url 'feature'%}" class="nav-item nav-link">Feature</a>
+                        <a href="{%url 'team'%}" class="nav-item nav-link">Chef</a>
+                        <a href="{%url 'food_order'%}" class="nav-item nav-link">Menu</a>
+                        <a href="{%url 'booking'%}" class="nav-item nav-link">Booking</a>
+                        <!-- <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu">
+                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                            </div> -->
+                        <a href="{%url 'archive'%}" class="nav-item nav-link">Archive</a>
+                        <a href="{%url 'user_info'%}" class="nav-item nav-link">User Information</a>
+                        <a href="{%url 'contact'%}" class="nav-item nav-link active">Contact</a>
+                        </div>
+                        <a href="{%url 'offers'%}" class="btn btn-outline-success btn-sm"  role="button" >Order Now</a>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </button>
+                        <ul class="dropdown-menu mt-2">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-home me-2"></i> Home</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i> Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Settings</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+
+        <!-- Page Header Start -->
+        <div class="page-header mb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Food Order</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="{%url 'index'%}">Home</a>
+                        <a href="{%url 'food_order'%}">Food Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+        <div class="container my-4">
+
+            <!-- 🔍 Search + Category Tabs -->
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+              <input type="text" id="searchInput" class="form-control me-2 w-50" placeholder="Search dish...">
+          
+              <div class="btn-group mt-2 mt-md-0" role="group" aria-label="Category navigation">
+                <button class="btn btn-outline-primary scroll-btn" data-target="#starters">Starters</button>
+                <button class="btn btn-outline-primary scroll-btn" data-target="#maincourse">Main Course</button>
+                <button class="btn btn-outline-primary scroll-btn" data-target="#desserts">Desserts</button>
+              </div>
+            </div>
+          
+            <!-- 🥗 Starters -->
+            <section id="starters" class="category-section mb-5">
+              <h4 class="mb-3">🥗 Starters</h4>
+              <div class="row g-4 dish-group">
+                <div class="col-md-4 dish-card" data-name="Grilled Sandwich">
+                  <div class="card border-0 shadow-sm">
+                    <img src="/static/img-2/Grilled sandwich.jpg" class="card-img-top" alt="Grilled Sandwich">
+                    <div class="card-body">
+                      <h5 class="card-title">Grilled Sandwich <span class="badge bg-success">New</span></h5>
+                      <p class="card-text">₹120</p>
+                      <button class="btn btn-primary order-btn" data-name="Grilled Sandwich" data-price="120"  data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 dish-card" data-name="Veg Burger">
+                  <div class="card border-0 shadow-sm">
+                    <img src="/static/img-2/Veggie-Sandwich.webp" class="card-img-top" alt="Veg Burger" height="240px">
+                    <div class="card-body">
+                      <h5 class="card-title">Veg Burger <span class="badge bg-danger">Spicy</span></h5>
+                      <p class="card-text">₹150</p>
+                      <button class="btn btn-primary order-btn" data-name="Veg Burger" data-price="150"  data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 dish-card" data-name="Chicken Burger">
+                    <div class="card border-0 shadow-sm">
+                      <img src="/static/img-2/Chicken burger.avif" class="card-img-top" alt="Chicken Burger" height="240px">
+                      <div class="card-body">
+                        <h5 class="card-title">Chicken Burger <span class="badge bg-danger">Spicy</span></h5>
+                        <p class="card-text">₹180</p>
+                        <button class="btn btn-primary order-btn" data-name="Chicken Burger" data-price="120"  data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </section>
+          
+            <!-- 🍛 Main Course -->
+            <section id="maincourse" class="category-section mb-5">
+              <h4 class="mb-3">🍛 Main Course</h4>
+              <div class="row g-4 dish-group">
+                <div class="col-md-4 dish-card" data-name="Cheese Pizza">
+                  <div class="card border-0 shadow-sm">
+                    <img src="/static/img-2/cheese pizza.jpg" class="card-img-top" alt="Cheese Pizza">
+                    <div class="card-body">
+                      <h5 class="card-title">Cheese Pizza</h5>
+                      <p class="card-text">₹250</p>
+                      <button class="btn btn-primary order-btn" data-name="Cheese Pizza" data-price="250"  data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 dish-card" data-name="Creamy Pasta">
+                  <div class="card border-0 shadow-sm">
+                    <img src="/static/img-2/cheesy pasta.jpg" class="card-img-top" alt="Creamy Pasta" height="240px">
+                    <div class="card-body">
+                      <h5 class="card-title">Creamy Pasta</h5>
+                      <p class="card-text">₹200</p>
+                      <button class="btn btn-primary order-btn" data-name="Creamy Pasta" data-price="200"  data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 dish-card" data-name="Chicken Biryani">
+                  <div class="card border-0 shadow-sm">
+                    <img src="/static/img-2/chicken biriyani.jpg" class="card-img-top" alt="Chicken Biryani">
+                    <div class="card-body">
+                      <h5 class="card-title">Chicken Biryani <span class="badge bg-danger">Spicy</span></h5>
+                      <p class="card-text">₹300</p>
+                      <button class="btn btn-primary order-btn" data-name="Chicken Biryani" data-price="300"  data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          
+            <!-- 🍰 Desserts -->
+            <section id="desserts" class="category-section mb-5">
+              <h4 class="mb-3">🍰 Desserts</h4>
+              <div class="row g-4 dish-group">
+                <div class="col-md-4 dish-card" data-name="Chocolate Cake">
+                  <div class="card border-0 shadow-sm">
+                    <img src="/static/img-2/chocolate cake.jpeg" class="card-img-top" alt="Chocolate Cake">
+                    <div class="card-body">
+                      <h5 class="card-title">Chocolate Cake <span class="badge bg-warning text-dark">New</span></h5>
+                      <p class="card-text">₹180</p>
+                      <button class="btn btn-primary order-btn" data-name="Chocolate Cake" data-price="180"  data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 dish-card" data-name="Rava Kesari">
+                    <div class="card border-0 shadow-sm">
+                      <img src="/static/img-2/Rava kesari.jpg" class="card-img-top" alt="Rava Kesari" height="235px">
+                      <div class="card-body">
+                        <h5 class="card-title">Rava Kesari <span class="badge bg-warning text-dark">New</span></h5>
+                        <p class="card-text">₹120</p>
+                        <button class="btn btn-primary order-btn" data-name="Rava Kesari" data-price="120"  data-bs-toggle="modal" data-bs-target="#orderModal">Order Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 dish-card" data-name="Qubani Ka Metha">
+                    <div class="card border-0 shadow-sm">
+                      <img src="/static/img-2/Qubani-Ka-Meetha.webp" class="card-img-top" alt="Qubani Ka Metha" height="230px">
+                      <div class="card-body">
+                        <h5 class="card-title">Qubani Ka Metha <span class="badge bg-warning text-dark">New</span></h5>
+                        <p class="card-text">₹200</p>
+                        <button class="btn btn-primary order-btn" data-name="Qubani Ka Metha" data-price="200" >Order Now</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </section>
+          
+          </div>
+    
+          
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+     
+      // 🔍 Search by name
+      document.getElementById('searchInput').addEventListener('input', function () {
+        const query = this.value.toLowerCase();
+        document.querySelectorAll('.dish-card').forEach(card => {
+          const name = card.dataset.name.toLowerCase();
+          card.style.display = name.includes(query) ? 'block' : 'none';
+        });
+      });
+    
+      // 🔘 Smooth scroll to section
+      document.querySelectorAll('.scroll-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = document.querySelector(btn.dataset.target);
+          target.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    
+    
+    /*pop up script*/
+    // 🛒 Open modal and populate dish info
+//    
+
+document.querySelectorAll('.order-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const dishName = button.getAttribute('data-name');
+    const dishPrice = parseFloat(button.getAttribute('data-price'));
+
+    document.getElementById('selectedDishName').textContent = dishName;
+    document.getElementById('selectedDishPrice').textContent = dishPrice.toFixed(2);
+
+    document.getElementById('modalDishName').value = dishName;
+    document.getElementById('modalDishPrice').value = dishPrice;
+
+    const quantityInput = document.getElementById('dishQuantity');
+    quantityInput.value = 1;
+
+    const updateTotal = () => {
+      const qty = parseInt(quantityInput.value) || 1;
+      document.getElementById('totalPrice').textContent = (dishPrice * qty).toFixed(2);
+    };
+
+    updateTotal();
+    quantityInput.removeEventListener('input', updateTotal); // just in case
+    quantityInput.addEventListener('input', updateTotal);
+
+    const modal = new bootstrap.Modal(document.getElementById('orderModal'));
+    modal.show();
+  });
+});
+
+    
+      function updateTotal(price, quantity) {
+      const total = price * parseInt(quantity || 1);
+      document.getElementById('totalPrice').textContent = `${total.toFixed(2)}`;
+    }
+    
+      // ✅ Handle form submission (optional: store or redirect)
+      document.getElementById('orderForm').addEventListener('submit', function(e) {
+        // e.preventDefault();
+        // const name = document.getElementById('hiddenDish        const qty = document.getElementById('dishQuantity').value;
+        
+        // alert(`✅ Order placed!\nDish: ${name}\nQuantity: ${qty}`);
+
+        const dish = document.getElementById('modalDishName').value;
+    const qty = document.getElementById('dishQuantity').value;
+    alert(`✅ Order placed!\nDish: ${dish}\nQuantity: ${qty}`);
+    
+        // Optional: close modal
+        bootstrap.Modal.getInstance(document.getElementById('orderModal')).hide();
+    
+        // You could send this to backend here instead of alert
+      });
+        
+      /*optional  Add Quantity-Based Total Update*/
+      document.getElementById('dishQuantity').addEventListener('input', () => {
+      const qty = parseInt(document.getElementById('dishQuantity').value) || 1;
+      const price = parseFloat(document.getElementById('hiddenDishPrice').value);
+      const total = qty * price;
+      document.getElementById('totalPrice').textContent = total.toFixed(2);
+    });
+    
+    </script>
+
+
+
+  <!-- Order Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content rounded-4">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orderModalLabel">Order Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form method="POST" action="{% url 'place_order' %}" id="orderForm">
+        {% csrf_token %}
+        <div class="modal-body">
+          <input type="hidden" name="dish_name" id="modalDishName">
+          <input type="hidden" name="dish_price" id="modalDishPrice">
+
+          <!-- ✅ Dish Name Display -->
+          <p><strong>Dish:</strong> <span id="selectedDishName"></span></p>
+
+          <!-- ✅ Price Display -->
+          <p><strong>Price:</strong> ₹<span id="selectedDishPrice">0</span></p>
+
+          <!-- Quantity Input -->
+          <div class="mb-3">
+            <label for="dishQuantity" class="form-label">Quantity:</label>
+            <input type="number" name="quantity" class="form-control" id="dishQuantity" value="1" min="1" required>
+          </div>
+
+          <!-- ✅ Total Display -->
+          <p><strong>Total:</strong> ₹<span id="totalPrice">0</span></p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success">✅ Confirm Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+       <!-- Footer Start -->
+       <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="footer-contact">
+                                <h2>Our Address</h2>
+                                <p><i class="fa fa-map-marker-alt"></i>3, E-Block, 3rd Avenue,
+                                    Annanagar East,
+                                    Chennai - 600 102</p>
+                                <p><i class="fa fa-phone-alt"></i>+044 2626 3355</p>
+                                <p><i class="fa fa-envelope"></i>DynastyDining@Yahoo.com</p>
+                                <div class="footer-social">
+                                    <a href=""><i class="fab fa-twitter"></i></a>
+                                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a href=""><i class="fab fa-youtube"></i></a>
+                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="footer-link">
+                                <h2>Quick Links</h2>
+                                <a href="">Terms of use</a>
+                                <a href="">Privacy policy</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="footer-newsletter">
+                        <h2>Newsletter</h2>
+                        <p>
+                            Savor the Legacy" – Join our newsletter for delicious updates, limited-time offers, and a taste of luxury delivered straight to your inbox..
+                        </p>
+                        <div class="form">
+                            <input class="form-control" placeholder="Email goes here">
+                            <button class="btn custom-btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright &copy; <a href="#">DynastyDining</a>, All Right Reserved.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="static/lib/easing/easing.min.js"></script>
+    <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="static/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    
+    <!-- Contact Javascript File -->
+    <script src="static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="static/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="static/js/main.js"></script>
+        </body>
+        </html>

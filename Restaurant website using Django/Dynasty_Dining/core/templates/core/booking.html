@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dynasty Dining - Restaurant Website </title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="/static/img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+        <link rel="icon" href="static/img/DALL·E 2025-02-12 19.47.50 - A sleek and elegant logo design for 'Dynasty Dining', featuring a stylized golden crown above a dining plate with chopsticks and a fork crossing under.webp">
+
+        <!-- Template Stylesheet -->
+        <link href="/static/css/style.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            iframe {
+              width: 100%;
+              height: 100%;
+              border: none;
+            }
+            .map-container {
+              height: 100%;
+              min-height: 400px;
+            }
+          </style>
+    </head>
+     
+    <body>
+       <!-- Nav Bar Start -->
+       <div class="navbar navbar-expand-lg bg-light navbar-light">
+        <div class="container-fluid">
+            <a href="{%url 'index' %}" class="navbar-brand">Dynasty <span>Dining</span></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="{% url 'index' %}" class="nav-item nav-link">Home</a>
+                    <a href="{% url 'about'%}" class="nav-item nav-link">About</a>
+                    <a href="{%url 'feature'%}" class="nav-item nav-link">Feature</a>
+                    <a href="{%url 'team'%}" class="nav-item nav-link">Chef</a>
+                    <a href="{%url 'food_order'%}" class="nav-item nav-link">Food Order</a>
+                    <a href="{%url 'booking'%}" class="nav-item nav-link">Booking</a>
+                    <!-- <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="single.html" class="dropdown-item">Blog Detail</a>
+                        </div> -->
+                    <a href="{%url 'archive'%}" class="nav-item nav-link">Archive</a>
+                    <a href="{%url 'user_info'%}" class="nav-item nav-link">Coupon</a>
+                    <a href="{%url 'contact'%}" class="nav-item nav-link active">Contact</a>
+                    </div>
+                    <a href="{%url 'offers'%}" class="btn btn-primary" tabindex="2" role="button">Offers</a>
+                     <div class="btn-group">
+                        <button type="button" class="btn btn-primary">Language</button>
+                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+
+         <!-- Page Header Start -->
+         <div class="page-header mb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>About Us</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">About Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+         
+        <div class="container mt-5">
+            <div class="row g-4">
+              <!-- Map on Left -->
+              <div class="col-md-6">
+                <div class="card shadow p-3 map-container">
+                  <h4 class="mb-3">Find Us Here</h4>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086304315665!2d-122.41941508468198!3d37.774929279759376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064c9b89af1%3A0x15e4479d7e71aa6c!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1618230724167!5m2!1sen!2sus"
+                    allowfullscreen=""
+                    loading="lazy">
+                  </iframe>
+                </div>
+              </div>
+          
+              <!-- Booking Form on Right -->
+              <div class="col-md-6">
+                <div class="card shadow p-4">
+                  <h2 class="mb-4">Book Your Table</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Book Now</button>
+    </form>
+                </div>
+              </div> 
+
+
+
+           <!-- Footer Start -->
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="footer-contact">
+                                    <h2>Our Address</h2>
+                                    <p><i class="fa fa-map-marker-alt"></i>3, E-Block, 3rd Avenue,
+                                        Annanagar East,
+                                        Chennai - 600 102</p>
+                                    <p><i class="fa fa-phone-alt"></i>+044 2626 3355</p>
+                                    <p><i class="fa fa-envelope"></i>DynastyDining@Yahoo.com</p>
+                                    <div class="footer-social">
+                                        <a href=""><i class="fab fa-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href=""><i class="fab fa-youtube"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="footer-link">
+                                    <h2>Quick Links</h2>
+                                    <a href="{% url 'terms_of_use' %}">Terms of use</a>
+                                    <a href="{%url 'privacy policy'%}">Privacy policy</a>
+                                    <a href="{%url 'feedback'%}">Feedback</a>
+                                    <a href="{%url 'help'%}">Help</a>
+                                    <a href="{%url 'FAQ'%}">FQAs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="footer-newsletter">
+                            <h2>Newsletter</h2>
+                            <p>
+                                Savor the Legacy" – Join our newsletter for delicious updates, limited-time offers, and a taste of luxury delivered straight to your inbox..
+                            </p>
+                            <div class="form">
+                                <input class="form-control" placeholder="Email goes here">
+                                <button class="btn custom-btn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>Copyright &copy; <a href="#">DynastyDining</a>, All Right Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="/static/lib/easing/easing.min.js"></script>
+        <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/static/lib/tempusdominus/js/moment.min.js"></script>
+        <script src="/static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="/static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="/static/mail/jqBootstrapValidation.min.js"></script>
+        <script src="/static/mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="/static/js/main.js"></script>
+    </body>
+</html>
