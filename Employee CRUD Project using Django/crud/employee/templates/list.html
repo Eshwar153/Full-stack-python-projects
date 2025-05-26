@@ -1,0 +1,74 @@
+{% extends "base.html" %} {%block title%} Employee List{%endblock%}
+ {%block content%} 
+ <div class="d-flex justify-content-between mb-3">
+    <h2>Employee List</h2>
+    <a class="btn btn-primary" href={%url 'create'%}>Create Employee</a>
+ </div>
+
+ <table class="table table-bordered">
+  <thead class="table-dark">
+    <tr>
+        <th>#</th>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Employee Email</th>
+        <th>Employee Contact</th>
+        <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%if employees%}
+    {%for employee in employees%}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{employee.employee_id}}</td>
+        <td>{{employee.employee_name}}</td>
+        <td>{{employee.employee_email}}</td>
+        <td>{{employee.employee_contact}}</td>
+        <td>
+            <a href="{%url 'update' employee.pk%}" class="btn btn-success btn-sm">Edit</a>
+            <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="{{employee.pk}}">Delete</button>
+        </td>
+
+    </tr>
+    {%endfor%}{%else%}
+    <tr>
+    <td colspan="6"class="text-center">No employee found ...</td>
+    </tr>
+    {%endif%}
+    </tbody>
+
+  <!-- Modal -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delte this Employee?
+        </div>
+        <div class="modal-footer">
+            <form method="POST" id="deleteForm">
+                {%csrf_token%}
+                <button type="submit" class="btn btn-danger">Yes, Delete</button>
+            </form>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const deleteModal = document.getElementById('deleteModal');
+    deleteModal.addEventListener('show.bs.modal', function(event){
+        const button = event.relatedTarget;
+        const employeeId = button.getAttribute('data-id')
+        const deleteForm = document.getElementById('deleteForm');
+        deleteForm.action = `/delete/${employeeId}/`;
+    })
+  </script>
+ </table>
+
+  
+ {%endblock%}
