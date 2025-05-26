@@ -1,0 +1,282 @@
+/* Media */
+/***********************************************/
+/* Below - 1350px / 16px = 84 (smaller-desktop)*/
+/***********************************************/
+@media (max-width: 84em) {
+    /*Hero Section*/
+    .hero-text h1{
+        font-size: 2.6rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .hero-text p{
+        font-size:1.4rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .hero-text button{
+        font-size:1rem;
+    }
+
+    /*TV*/
+    .tv-container.details{
+        color:white;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    
+    .tv-container .details .title{
+        font-size:2.2rem;
+        margin-bottom:1.2rem;
+    }
+    
+    .tv-container .details .desc{
+    font-size:1rem;
+    margin-bottom:1rem;
+    }
+    
+    .subscription{
+        
+        padding:0.8rem 4rem;
+        
+    }
+    .price{
+        font-size:0.8rem;
+        color:#4d4d4d;
+    }
+}
+
+/***********************************************/
+/* Below - 1200px / 16px = 75 (Landscape Tablets)*/
+/***********************************************/
+@media (max-width: 75em) {
+    /*Hero Section*/
+    .hero-container{
+       flex-direction: column-reverse;
+       justify-content: center;
+        }
+        .hero-text{
+            text-align: center;
+        }
+        .hero-text h1{
+            font-size: 2.2rem;
+            margin-bottom: 0.4rem;
+        }
+        
+        .hero-text p{
+            font-size:1.4rem;
+            margin-bottom: 0.4rem;
+        }
+        
+        .hero-text button{
+            font-size:0.8rem;
+        }
+
+        /*Products*/
+        .primary,
+.secondary{
+    
+    padding:0.6rem 1rem;
+    
+}
+}
+
+/***********************************************/
+/* Below - 940px / 16px = 58.75 ( Tablets)*/
+/***********************************************/
+@media (max-width: 59em) {
+    /*Hero Section*/
+    .hero-text h1{
+        font-size: 2.8rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .hero-text p{
+        font-size:1.8rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .hero-text button{
+        padding:0.6rem 1rem;
+        font-size:0.8rem;
+    }
+    /*Product*/
+    .products-container{
+        display: grid;
+        grid-template-columns:1fr;
+        gap:2.4rem;
+    }
+    /*TV*/
+    .tv-container{
+        display:flex;
+        flex-direction:column-reverse;
+        gap:2.4rem
+    }
+
+    /*TV-Products*/
+    .product-desc h1{
+        font-size:3.2rem;  
+    }
+    
+    .product-desc p{
+        font-size:1rem;  
+    }
+
+    /*Footer*/
+    .footer{
+        padding:3.2rem 6.4rem 0rem 4.2rem;
+        
+    }
+    
+    .footer-grid{
+        padding:0 2rem;
+    }
+    
+    .footer-card a,p{
+        font-size:0.8rem;
+    }
+}
+
+/***********************************************/
+/* Below - 700px / 16px = 44 (small Tablets)*/
+/***********************************************/
+@media (max-width: 44em) {
+/*Header(navigation section)*/
+   .nav-links{
+    position: absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background-color: #444445;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+    display: none;
+   }
+
+   .nav-links.active{
+    display: flex;
+   }
+   .menu-toggle{
+    display: block;/*block means it shows the nav links because i display it none now i opened*/
+    padding:1rem 1rem 1rem 0;
+   }
+
+    /*Hero Section*/
+    .hero-text h1{
+        font-size: 2.2rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .hero-text p{
+        font-size:1.2rem;
+        margin-bottom: 0.6rem;
+    }  
+
+    /*TV*/
+    
+    .tv-container .details .title{
+        font-size:2rem;
+        margin-bottom:1rem;
+    }
+    
+    /*tv-products*/
+
+    .product-box{
+        padding:1.2rem 2rem;
+    }
+    
+    .product-desc h1{
+        font-size:2rem;  
+    }
+    
+    .product-desc p{
+        font-size:1rem;  
+    }
+
+     /*Footer*/
+     .footer{
+        padding:3.2rem 6.4rem 0rem 4.2rem;
+        
+    }
+    
+    .footer-grid{
+        grid-template-columns: repeat(2,1fr);
+        padding:0.1rem;
+        gap:1rem;
+    }
+
+}
+
+/***********************************************/
+/* Below - 550px / 16px = 34 (Phone)*/
+/***********************************************/
+
+@media (max-width: 34em) {
+    /*Hero Section*/
+    .hero-text h1{
+        font-size: 2rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .hero-text p{
+        font-size:0.8rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .hero-banner{
+        display: none;
+    }
+
+    /*Products*/
+    .product-title{
+        font-size: 1rem;
+    }
+
+    .btn-group{
+        display:flex;
+        flex-direction: column;
+        gap:0.6rem;
+    }
+
+    .primary,
+.secondary{
+    padding:0.4rem;
+    font-size:0.8rem; 
+}
+
+/*TV*/
+.tv-container .details .title{
+    font-size:0.8rem;
+    margin-bottom:1.2rem;
+}
+
+.subscription{
+    padding:0.8rem 1rem;
+}
+/*TV Products*/
+.product-box{
+    padding:1.2rem 1rem;
+}
+
+.product-desc h1{
+    font-size:1.4rem;  
+}
+
+.product-desc p{
+    font-size:0.8rem;  
+}
+/*Footer*/
+.footer{
+    padding:3.2rem 6.4rem 0rem 4.2rem;
+    
+}
+
+.footer-grid{
+    grid-template-columns: repeat(1,1fr);
+    padding:0.1rem;
+    gap:1rem;
+}
+}

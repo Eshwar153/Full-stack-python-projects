@@ -1,0 +1,303 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Header*/
+header{
+    position: fixed;
+    width:100%;
+    z-index:100;/*x axis y axix z axis z means nammala pakura maari
+    100 is not a pixed but a value*/
+}
+
+/* 1rem=16px*/
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #444445;
+    padding:0rem 2rem;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    gap:1.6rem;
+    background-color: #444445;
+    padding:1rem;
+    flex-grow: 1;
+}
+
+/*Descendent selector*/
+.nav-link a{
+ display: block;
+ color:#aeaeae;
+ letter-spacing: 1px;
+ text-decoration: none;
+ transition: all 0.3s;
+}
+
+.nav-link a:hover{
+color:wheat;
+cursor:pointer;
+}
+/*Menu toggle button*/
+.menu-toggle{
+    display: none;
+    cursor:pointer;
+}
+.menu{
+    width:40px;
+    height:30px;
+    fill:#aeaeae
+}
+/*Hero Section*/
+.hero{
+    background-color: rgb(0,0, 0);
+    padding:3.2rem 2.4rem;
+}
+.hero-container{
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    height:100vh;/*vh means view height for compatability*/
+}
+.hero-text{
+    color:white;
+}
+
+.hero-text h1{
+    font-size: 3.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.hero-text p{
+    font-size:1.8rem;
+    margin-bottom: 0.4rem;
+}
+
+.hero-text button{
+    border:none;
+    padding: 0.8rem 1.2rem;
+    color:#fff;
+    background-color:#0071e3;
+    border-radius:1.6rem;
+    transition: all 0.3s;
+}
+.hero-text button:hover{
+    background-color: blue;
+    cursor:pointer;
+}
+
+/*Products*/
+.products{
+ padding:3.2rem 2.8rem;
+ background-color: #f5f5f7;
+}
+
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:2.4rem;
+}
+
+.product-card{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-between;
+    background-color: #f5f5f7;
+    padding: 2.4rem 1.6rem;
+   box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+   overflow: hidden;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+.product-title{
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+.btn-group{
+    margin-bottom: 1rem;
+}
+.primary,
+.secondary{
+    border:none;
+    padding:0.8rem 1.2rem;
+    font-size:0.8rem;
+    border-radius:1.6rem;
+    transition: all 0.3s;
+}
+.primary{
+    color:#fff;
+    background-color: #0071e3;
+}
+.primary:hover{
+    cursor:pointer;
+    background-color: #0160c0;
+}
+.secondary{
+    color:#0071e3;
+    border:1px solid #0160c0;
+}
+.secondary:hover{
+    cursor: pointer;
+    color:#fff;
+    background-color: #0077ed;
+}
+.product-4{
+    background-color: black;
+    color:white;
+}
+.product-img{
+    width:100%;
+    transition: all 1s;
+}
+
+.product-img:hover{
+    transform:scale(1.04)
+}
+
+/*TV */
+.apple-tv{
+    background-color: rgb(0, 0,0);
+    padding:16rem 2.4rem;
+}
+
+.tv-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+.tv-container .details{
+    color:white;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.tv-container .details .title{
+    font-size:2.8rem;
+    margin-bottom:1.2rem;
+}
+
+.tv-container .details .desc{
+font-size:1.2rem;
+margin-bottom:1.2rem;
+}
+
+.subscription{
+    margin-bottom:0.6rem;
+    padding:1rem 6rem;
+    font-weight:600;
+    letter-spacing:1px;
+    border:none;
+    border-radius:0.3rem;
+    background-color: #ffffff;
+    transition: all 0.3s;
+}
+
+.subscription:hover{
+cursor:pointer;
+background-color: #ccc;
+}
+
+.price{
+    color:#4d4d4d;
+}
+
+.tv-logo{
+    width:30%;
+}
+
+/*TV Products*/
+.tv-products{
+    padding:8rem 0rem;
+    background-color: #f5f5f7;
+}
+
+.product-box{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding:1.2rem 8rem;
+}
+
+.product-box img{
+    width:50%;
+    height: 50%;
+    margin-bottom:1.4px;
+}
+
+.product-desc h1{
+    text-align:center;
+    font-size:6.2rem;
+    font-weight:700;
+}
+
+.product-desc p{
+    text-align:center;
+    font-size:1.6rem;
+    font-weight:600;
+    color:#86868b;
+}
+
+/*Footer*/
+.footer{
+    padding:3.2rem 6.4rem 0rem 6.4rem;
+    background-color: #444445;
+}
+
+.footer-grid{
+    color:#ccc;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    align-items:start;
+    padding:0 12rem;
+}
+
+.footer-title{
+    color:#fff;
+    font-size:1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-card{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:start;
+    gap:0.4mm;
+    margin-bottom:1rem;
+}
+
+.footer-card a{
+    color:#ccc;
+    text-decoration:none;
+    transition: all 0.3s;
+}
+
+ .footer-card a:hover{
+    color:#fff;
+ }
+
+ .footer p{
+    text-align:center;
+    color:#ccc;
+    padding:1rem;
+ }
