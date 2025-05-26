@@ -1,0 +1,64 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+     background:#ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+
+.navbar .navbar-brand {
+      color: #fbaf32;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+}
+
+.navbar .navbar-brand span {
+    color: #719a0a;
+}
+
+.navbar .navbar-nav .nav-link {
+    /* color: #333; */
+    color:white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #fbaf32;
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar .navbar-brand {
+        font-size: 24px;
+    }
+}
+
+iframe {
+    border: 0;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    iframe {
+        height: 200px;
+    }
+}
+
+.top-banner {
+    background: url('/img/Bg\ for\ about.jpg') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
