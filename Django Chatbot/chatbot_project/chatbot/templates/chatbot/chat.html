@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #chatbox { width: 100%; height: 400px; overflow-y: scroll; border: 1px solid #ccc; padding: 10px; }
+        input { width: 80%; padding: 10px; }
+        button { padding: 10px; }
+    </style>
+</head>
+<body>
+    <h2>Chatbot</h2>
+    <div id="chatbox"></div>
+    <input type="text" id="user_input" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script>
+        function sendMessage() {
+            let userInput = document.getElementById("user_input").value;
+            let chatbox = document.getElementById("chatbox");
+
+            chatbox.innerHTML += `<p><b>You:</b> ${userInput}</p>`;
+            document.getElementById("user_input").value = "";
+
+            fetch("", {
+                method: "POST",
+                body: new URLSearchParams({ message: userInput }),
+                headers: { "Content-Type": "application/x-www-form-urlencoded" }
+            })
+            .then(response => response.json())
+            .then(data => {
+                chatbox.innerHTML += `<p><b>Bot:</b> ${data.response}</p>`;
+                chatbox.scrollTop = chatbox.scrollHeight;
+            });
+        }
+    </script>
+</body>
+</html>
