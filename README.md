@@ -20,3 +20,27 @@ I’m actively expanding my skill set to include:
 🐳 Docker for containerization and streamlining modern DevOps workflow
 
 I believe in continuous learning and love taking on new challenges to grow as a developer. I'm always looking to connect with like-minded professionals and contribute to exciting projects.
+
+Tech Stack
+Frontend:
+
+HTML5, CSS3, JavaScript
+
+Frameworks/Libraries: React, Angular, JavaScript/jQuery
+
+CSS Frameworks: Bootstrap, Tailwind CSS
+
+Backend:
+
+Python core
+
+Web frameworks: Django, Flask, FastAPI
+
+REST API development: Django REST Framework, Flask-RESTful, FastAPI
+
+Database:
+
+Relational DB: MSSQL AND MYSQL
+
+
+
